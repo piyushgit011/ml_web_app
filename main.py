@@ -121,10 +121,10 @@ def add_sidebar():
 def add_prediction(inputs):
     #load model
     # model_dt = pickle.load(open('model_dt.pkl', 'rb'))
-    model_dt = pickle.load(open('model_rf.pkl', 'rb'))
+    #model_dt = pickle.load(open('model_rf.pkl', 'rb'))
     # model_dt = pickle.load(open('model_xg.pkl', 'rb'))
     # model_dt = pickle.load(open('model_lbm.pkl', 'rb'))
-    # model_dt = pickle.load(open('model_log.pkl', 'rb'))
+    model_dt = pickle.load(open('model_log.pkl', 'rb'))
     scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 
