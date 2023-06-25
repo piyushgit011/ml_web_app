@@ -148,16 +148,16 @@ def main():
     inputs = add_sidebar()
     with st.container():
         st.title('Cancer Prediction')
-        st.write('This is a simple cancer prediction app built with Streamlit and Scikit-learn')
+        st.write('The Breast Cancer Diagnosis app is a machine learning-powered tool designed to assist medical professionals in diagnosing breast cancer. Using a set of measurements, the app predicts whether a breast mass is benign or malignant. It provides a visual representation of the input data using a radar chart and displays the predicted diagnosis and probability of being benign or malignant.')
     # columns in streamlit
     col1, col2 = st.columns([4, 1])
 
     with col1:
-        st.write('Column1')
+        # st.write('Column1')
         fig = get_radar_chart(inputs)
         st.plotly_chart(fig)
     with col2:
-        st.write('Column2')
+        # st.write('Column2')
         add_prediction(inputs)
 
 if __name__ == '__main__':
