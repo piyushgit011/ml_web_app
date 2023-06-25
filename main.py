@@ -125,14 +125,14 @@ def add_prediction(inputs):
     model_dt = pickle.load(open('model_xg.pkl', 'rb'))
     # model_dt = pickle.load(open('model_lbm.pkl', 'rb'))
    # model_dt = pickle.load(open('model_log.pkl', 'rb'))
-    scaler = pickle.load(open('scaler.pkl', 'rb'))
+    # scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 
     data = pd.DataFrame.from_dict([inputs])
     # print(data)
-    input_arraysc = scaler.transform(data)
+    # input_arraysc = scaler.transform(data)
     # print(input_arraysc)
-    pred = model_dt.predict(input_arraysc)
+    pred = model_dt.predict(data)
     st.write("probability of being benign: ",float(model_dt.predict_proba(input_arraysc)[0][0]))
     st.write("probability of being malicious: ",model_dt.predict_proba(input_arraysc)[0][1])
     # st.write(input_arraysc)
