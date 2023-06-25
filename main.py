@@ -141,7 +141,7 @@ def add_prediction(inputs):
     if pred[0] == 0:
         st.write('The cell is benign')
     else:
-        st.write('The cell is malignant')
+        st.write('The cell is malicious')
 
 def main():
     st.set_page_config(page_title='cancer prediction', layout="wide", initial_sidebar_state="expanded")
