@@ -132,7 +132,8 @@ def add_prediction(inputs):
     # print(data)
     # input_arraysc = scaler.transform(data)
     # print(input_arraysc)
-    pred = model_dt.predict(data)
+    input_arraysc = data
+    pred = model_dt.predict(input_arraysc)
     st.write("probability of being benign: ",float(model_dt.predict_proba(input_arraysc)[0][0]))
     st.write("probability of being malicious: ",model_dt.predict_proba(input_arraysc)[0][1])
     # st.write(input_arraysc)
